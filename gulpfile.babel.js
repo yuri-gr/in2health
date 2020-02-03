@@ -5,7 +5,7 @@ import postcss from 'gulp-postcss'
 import autoprefixer from 'autoprefixer'
 
 /* Compile sass to css task */
-export function cssBuildTask(){
+function cssBuildTask(){
 	return gulp.src( 'assets/sass/**/*.*' )
 		.pipe( sass( { outputStyle: 'compressed' } ).on( 'error', sass.logError ) )
 		.pipe( postcss( [ autoprefixer() ] ) )
@@ -13,7 +13,7 @@ export function cssBuildTask(){
 }
 
 /* Layout builder task */
-export function buildLayout(){
+function buildLayout(){
 	return gulp.src( [ 'layout/pages/**/*.html' ] )
 		.pipe( inject( { pattern: '<!--inject:<filename>-->' } ) )
 		.pipe( gulp.dest( './' ) );
@@ -27,4 +27,4 @@ export function watch(){
 }
 
 /* Default task */
-export default gulp.series( watch )
+export default gulp.series( buildLayout, cssBuildTask )
