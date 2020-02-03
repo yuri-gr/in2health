@@ -22,5 +22,8 @@
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "popper": "^1.0.1"
+  },
+  "scripts": {    
+    "build": "gulp"
   }
 }
