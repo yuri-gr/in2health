@@ -1,0 +1,43 @@
+$component : 'popover'
+
+.#{$component}
+    font-size: 21px
+    line-height: 32px
+    letter-spacing: .3px
+    max-width: 572px !important
+    padding: 22px 14px 20px 15px
+    background: color('white')
+    border: 1px solid rgba(133, 147, 163, .15)
+    box-sizing: border-box
+    box-shadow: 0px 10px 40px rgba(62, 41, 142, .07)
+    border-radius: 8px
+
+    &.bs-popover-top
+        top: -10px !important
+
+    &.bs-popover-bottom
+        top: 10px !important
+
+    .popover-header
+        font-family: var(--font-family-theme)
+        font-size: 21px
+        font-weight: bold
+        line-height: 32px
+        letter-spacing: .3px
+        border: none
+        background: none
+        padding-top: 0
+        padding-bottom: 0
+
+    .popover-body
+        color: rgba(52, 75, 102, .9)
+
+    &.bs-popover-top, &.bs-popover-bottom
+        .arrow::before
+            border-top-color: color('white') !important
+            border-bottom-color: color('white') !important
+
+    &.bs-popover-right, &.bs-popover-left
+        .arrow::before
+            border-left-color: color('white') !important
+            border-right-color: color('white') !important

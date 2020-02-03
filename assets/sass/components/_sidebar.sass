@@ -1,0 +1,72 @@
+$component : 'sidebar'
+
+.#{$component}
+    width: 200px
+    min-width: 200px
+    max-width: 200px
+    margin-right: 50px
+    height: 100vh
+    padding: 38px 0 93px 0
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background: color('white')
+    transition: all .3s
+
+    @include media-breakpoint-up(md)
+        height: 846px
+        min-height: 846px
+        max-height: 846px
+
+    @include media-breakpoint-down(md)
+        margin-left: -250px
+
+        &.active
+            margin-left: 0
+
+    +element('header')
+        text-align: center
+
+    +element('logo')
+        margin-bottom: 5px
+        
+    +element('user')
+        font-size: 24px
+        line-height: 33px
+        letter-spacing: 0.35px
+        color: color('darkerBlue')
+
+    +element('menu')
+        padding: 0
+        margin: 0
+
+    +element('menu-item')
+        list-style: none
+        padding: 0
+        margin: 5px 0
+
+    +element('menu-link')
+        color: color('lightBlue')
+        padding: 16px 20px
+        display: flex
+        flex-direction: row
+        align-items: center
+        transition: all .5s ease-out
+
+        &:hover, &:focus, &:active
+            color: color('darkBlue')
+            text-decoration: none
+
+        +modifier('active')
+            color: color('white')
+            background: theme-color('primary')
+
+            &:hover, &:focus, &:active
+                color: color('white')
+
+    +element('menu-link-text')
+        font-weight: 600
+        font-size: 16px
+        line-height: 24px
+        display: inline-block
+        margin-left: 14px

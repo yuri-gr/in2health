@@ -1,0 +1,82 @@
+$component : 'medical-age'
+
+.#{$component}
+    width: 228px
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+    +modifier('bad')
+        +element('years', $component)
+            +modifier('vary')
+                color: #E76663
+
+        +element('bar', $component)
+            +modifier('vary')
+                background: linear-gradient(130.93deg, #F37873 8.52%, #E76663 81.32%)
+
+    +modifier('matches')
+        +element('years', $component)
+            +modifier('vary')
+                color: #FBB429
+
+        +element('bar', $component)
+            +modifier('vary')
+                background: linear-gradient(144.99deg, #FCD82B 17.67%, #FBC029 109.58%)
+
+    +modifier('good')
+        +element('years', $component)
+            +modifier('vary')
+                color: #48C392
+
+        +element('bar', $component)
+            +modifier('vary')
+                background: linear-gradient(117.59deg, #65D9A5 8.52%, #48C392 81.32%)
+
+    +element('wrapper')
+        width: 139px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-end
+
+    +element('age')
+        width: 67px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    +element('years')
+        font-weight: bold
+        font-size: 34px
+        line-height: 41px
+        color: color('darkGrey')
+        text-align: center
+        letter-spacing: .74
+        margin-bottom: 10px
+
+    +element('bar')
+        width: 100%
+        height: var(--medical-bar-max-height)
+        border-radius: 6px
+        background: color('lightGray2')
+        position: relative
+
+    +element('base')
+        width: 228px
+        height: 2px
+        position: absolute
+        left: -114px
+        top: -1px
+        border-top: 2px dashed color('darkerGray1')
+        opacity: .5
+
+    +element('label')
+        font-weight: 600
+        font-size: 14px
+        line-height: 19px
+        color: color('darkerGray2')
+        text-align: center
+        margin-top: 12px

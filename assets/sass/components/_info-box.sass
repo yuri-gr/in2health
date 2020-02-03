@@ -1,0 +1,52 @@
+$component: 'info-box'
+
+.#{$component}
+    background: color('white')
+    border: 1px solid rgba(133, 147, 163, .15)
+    box-sizing: border-box
+    box-shadow: 0 10px 40px rgba(62, 41, 142, .03)
+    border-radius: 8px
+
+    +element( 'header' )
+        text-align: center
+        padding: 0 16px
+
+    +element( 'header-title' )
+        font-weight: 800
+        font-size: 24px
+        line-height: 1.5em
+        letter-spacing: .4px
+        padding: 24px 0 8px 0
+        display: block
+
+    +element( 'header-icon' )
+        position: relative
+        top: -7px
+
+    +element( 'header-text' )
+        font-size: 17px
+        line-height: 1.65em
+        letter-spacing: .3px
+
+    +element( 'content' )
+        padding: 0 50px
+        height: 280px
+        display: flex
+        align-items: center
+        justify-content: center
+
+    +element( 'footer' )
+        display: flex
+        flex-direction: row
+        align-items: start
+        justify-content: space-between
+        border-top: 1px solid color('lightGray1')
+        padding: 24px
+
+    +element( 'footer-icon' )
+        margin-right: 16px
+
+    +element( 'footer-text' )
+        font-size: 17px
+        line-height: 1.65em
+        margin: 0

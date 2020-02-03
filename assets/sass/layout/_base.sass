@@ -1,0 +1,103 @@
+body 
+    font-family: var(--font-family-theme)
+    color: theme-color("dark")
+    background: #F5F7FB
+
+h1, h2, h3, h4, h5
+    margin: 0 
+    padding: 0
+
+h1 
+    font-weight: normal
+    font-size: 26px
+    line-height: 1.35em
+    letter-spacing: .44px
+
+    @include media-breakpoint-up(md)
+        font-size: 34px
+
+h2 
+    font-weight: 800
+    font-size: 34px
+    line-height: 1.23em
+    letter-spacing: .5px
+
+    @include media-breakpoint-up(md)
+        font-size: 44px
+
+h3
+    font-weight: 800
+    font-size: 24px
+    line-height: 1.5em
+    letter-spacing: .5px
+
+    @include media-breakpoint-up(md)
+        font-size: 30px
+        
+h4
+    font-weight: 800
+    font-size: 18px
+    line-height: 1.5em
+    letter-spacing: .4px
+
+    @include media-breakpoint-up(md)
+        font-size: 24px
+
+h5
+    font-weight: 800
+    font-size: 15px
+    line-height: 2.12em
+    letter-spacing: .4px
+
+    @include media-breakpoint-up(md)
+        font-size: 17px
+
+p, div, span
+    font-size: 17px
+    line-height: 1.525em
+    letter-spacing: .4px
+
+    &.smaller
+        font-size: 15px
+
+    @include media-breakpoint-up(md)
+        font-size: 21px
+
+        &.smaller
+            font-size: 17px
+
+.wrapper
+    display: flex
+    flex-direction: row
+    align-items: start
+    justify-content: center
+    margin: 0 auto
+    max-width: 1490px
+    width: 100%
+
+    &.active
+        overflow-x: hidden
+
+    .inner-wrapper 
+        max-width: 952px
+        width: 100%
+        margin: 0 auto
+
+    #content
+        width: 100%
+        max-width: 1140px
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+        margin: 0 0 81px 0
+        position: relative
+        overflow-x: hidden
+
+.overlay
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: 100
+    background: rgba( 0, 0, 0, .09 )
+    display: none

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--inject:../components/html/common-meta.html-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>in2health</title>
+    <!--inject:../components/html/favicon.html-->
+    <!--inject:../components/html/common-css.html-->
+    <!--inject:../components/html/extra-header.html-->
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <!--inject:../components/sidebar.html-->
+
+        <!-- Content -->
+        <main id="content" class="dashboard">
+            <button type="button" class="sidebar-collapse">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <section class="dashboard__header">
+                <div class="inner-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>My Health Dashboard</h1>
+                                <p class="my-0">Hi Gill. We’ve analysed your results, let’s see what they mean for you.</p>
+                                <p class="my-0 smaller">Wherever you’re at, don’t stress, we can support you with what you need to improve your scores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard__picture">
+                <div class="inner-wrapper">
+                    <div class="container-fluid">
+                        <h2>The Big Picture</h2>
+                        <p class="mb-8 smaller">Displaying results: 14 December 2019 09:12A M</p>
+    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!--inject:../components/info-box-medical-age-matches.html-->
+                            </div>
+                            <div class="col-md-6 mt-3 mt-sm-3 mt-md-0">
+                                <!--inject:../components/info-box-vitality-score-bad.html-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard__forecast">
+                <div class="inner-wrapper">
+                    <div class="container-fluid">
+                        <h2 class="mb-10">My Health Forecast</h2>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <!--inject:../components/health-score.html-->
+                            </div>
+                            <div class="col-md-7  mt-5">
+                                <p class="mb-7">Not a bad effort but like most of the population, this score means you could change a number of things 
+                                    to protect yourself against 95% of preventable chronic disease and live well now and into the future.</p class="mb-5">
+                                <p class="mb-7">Review your detailed health scores, including your Heart, Mind and Cancer prevention scores below.</p>
+                                <button class="btn btn-wider btn-success w-75" id="showAllScores"><i class="fa fa-plus"></i> View all health scores</button>
+                            </div>
+                        </div>
+
+                        <section id="dashboard-scores">
+                            <div class="row mt-6">
+                                <div class="col-md-4">
+                                    <!--inject:../components/health-score-mind-score.html-->
+                                </div>
+                                <div class="col-md-8 mt-5 dashboard__forecast-description">
+                                    <p class="py-5">A Mind Score of XX isn’t too bad, but there are a few things you could be doing to reduce 
+                                        your risk of conditions that may affect your brain’s future health.</p class="py-5">
+                                </div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-md-4">
+                                    <!--inject:../components/health-score-stress-score.html-->
+                                </div>
+                                <div class="col-md-8 mt-5 dashboard__forecast-description">
+                                    <p class="py-5">A Stress Score of XX is moderately high. Over time, your stress levels may negatively impact 
+                                        your health and vitality, so it's worth looking at strategies to reduce unhealthy stress.</p>
+                                </div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-md-4">
+                                    <!--inject:../components/health-score-cancer-prevention.html-->
+                                </div>
+                                <div class="col-md-8 mt-5 dashboard__forecast-description">
+                                    <p class="py-5">A Cancer Prevention Score of XX isn't a bad effort, but you could be doing more to reduce 
+                                        your risk of getting the most common cancers. Get an action plan to improve your score.</p class="py-5">
+                                </div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-md-4">
+                                    <!--inject:../components/health-score-hearth-score.html-->
+                                </div>
+                                <div class="col-md-8 mt-5 dashboard__forecast-description">
+                                    <p class="py-5">Your Heart Score is XX. Your heart's function is crucial to your whole body as it connects 
+                                        everything. There’s some room to improve to keep your heart (and other key bits!) healthy.</p class="py-5">
+                                </div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-md-4">
+                                    <!--inject:../components/health-score-diabetes-prevention.html-->
+                                </div>
+                                <div class="col-md-8 mt-5 dashboard__forecast-description">
+                                    <p class="py-5">A Body Impact Score of XX means your body isn't as well balanced as it could be with a moderate 
+                                        risk of your bones and muscles stopping you from getting out and enjoying life.</p class="py-5">
+                                </div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-md-4">
+                                    <!--inject:../components/health-score-body-impact.html-->
+                                </div>
+                                <div class="col-md-8 mt-5 dashboard__forecast-description">
+                                    <p class="py-5">A Body Impact Score of XX means your body isn't as well balanced as it could be with a moderate 
+                                        isk of your bones and muscles stopping you from getting out and enjoying life.</p class="py-5">
+                                </div>
+                            </div>
+                            <div class="row justify-content-end mt-10">
+                                <div class="col-md-8">
+                                    <button class="btn btn-wider btn-success" id="hideAllScores"><i class="fa fa-minus"></i> Hide all health scores</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard__features">
+                <div class="inner-wrapper">
+                    <div class="container-fluid">
+                        <div class="row mb-5 mb-md-24 pt-0 pt-md-24">
+                            <div class="col-md-4">
+                                <h3 class="mb-7">Reduce my risks</h3>
+                                <p class="mb-7">This interactive tool allows you to see what effect different lifestyle 
+                                    choices can have on your Medical Age and Vitality Score.</p>
+                                <p class="mb-7">These will also improve your Health Forecast.  Time to get inspired!</p>
+                                <button class="btn btn-primary w-90">Find out how</button>
+                            </div>
+                            <div class="col-md-8">
+                                <img src="assets/images/reduce-my-risks.png" width="100%">
+                            </div>
+                        </div>
+                        <div class="row flex-column-reverse flex-md-row justify-content-between">
+                            <div class="col-md-6">
+                                <img src="assets/images/requests-personalised-action-plan.png" width="100%">
+                            </div>
+                            <div class="col-md-5">
+                                <h3 class="mb-7">Request personalised action plan</h3>
+                                <p class="mb-7">Improve your scores by making small lifestyle changes with the help of an In2Health doctor.</p>
+                                <p class="mb-7">We'll assess your results, providing referrals if needed (for a small fee), along with actionable 
+                                    lifestyle and medical recommendations.</p>
+                                <button class="btn btn-primary w-75">Take some action</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!--inject:../components/html/common-js.html-->
+    <script>
+    $(function(){
+        $("#nav-menu > li:nth-of-type(1) > a").addClass("sidebar__menu-link_active");
+    });
+    </script>
+</body>
+</html>

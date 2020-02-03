@@ -1,0 +1,26 @@
+{
+  "name": "in2health",
+  "description": "in2health",
+  "version": "1.0.0",
+  "author": "in2health",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "babel-register": "^6.26.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inject-file": "^0.0.19",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.2"
+  },
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper": "^1.0.1"
+  }
+}

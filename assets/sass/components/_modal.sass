@@ -1,0 +1,28 @@
+$component : 'modal'
+
+.#{$component}
+
+    .modal-dialog
+        max-width: 761px
+
+        &.narrower
+            max-width: 601px
+
+    .modal-content
+        background: color('white')
+        border: 1px solid rgba(133, 147, 163, .15)
+        box-sizing: border-box
+        box-shadow: 0px 10px 40px rgba(62, 41, 142, .03)
+        border-radius: 8px
+
+    .modal-body
+        padding: 32px 47px
+
+        .close > span
+            font-size: 36px
+            font-weight: normal
+            line-height: 1em
+
+.modal-backdrop
+    opacity: 1
+    background: rgba( 0, 0, 0, .09 )

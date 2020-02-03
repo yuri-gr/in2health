@@ -1,0 +1,45 @@
+$page : 'reduce-my-risks'
+
+.#{$page}
+    +element('header')
+        text-align: center
+        padding: 24px 0 33px 0
+
+    +element('actions')
+        padding: 30px 43px
+        background: color('white')
+        border-radius: 5px
+
+    +element('scores')
+        text-align: center
+        background: color('white')
+        border-radius: 5px
+        height: 100%
+        display: grid
+        grid-template-areas:  "top" "bottom"
+
+    +element('score')
+        display: flex
+        flex-direction: column
+
+        .medical-age
+            transform: scale(.75)
+
+        .battery
+            transform: scale(.65)
+
+        +modifier('top')
+            grid-area: 'top'
+
+        +modifier('bottom')
+            grid-area: 'bottom'
+            border-top: 1px solid color('lightGray')
+
+    +element('features')
+        border-radius: 5px
+        padding: 100px 0
+        background: color('white') url(../images/wave-bg1.png) left top no-repeat
+        background-size: contain
+
+        @include media-breakpoint-up(md)
+            padding: 170px 0 370px 0

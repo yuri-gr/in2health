@@ -1,0 +1,57 @@
+$component : 'action'
+
+.#{$component}
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    background: color('white')
+    border: 1px solid color('lightGray')
+    border-radius: 3px
+    padding: 11px 16px 11px 0
+    margin-bottom: 8px
+
+    +element('wrapper')
+
+    +element('input')
+        position: absolute
+        opacity: 0
+        width: 0
+        height: 0
+
+        & + label::before
+            content: ""
+            position: absolute
+            left: 16px
+            top: calc( 50% - 12px )
+            width: 24px
+            height: 24px
+            background: color('white');
+            border: 0.75px solid color('darkerGray');
+            border-radius: 100%
+            transition: background .4s ease-in
+
+        &:checked + label::before
+            border-color: theme-color('success')
+            background: theme-color('success') url(../images/icons/check.svg) center center no-repeat
+            
+    +element('label')
+        cursor: pointer
+        margin: 0
+        position: relative
+        padding-left: 56px
+        
+    +element('title')
+        font-weight: 600
+        font-size: 17px
+        line-height: 27px
+
+    +element('description')
+        font-size: 13px
+        line-height: 1.85em
+        letter-spacing: .3px
+        opacity: .8
+        display: block
+
+    +element('icon')
+        margin-left: 16px

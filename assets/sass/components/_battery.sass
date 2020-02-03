@@ -1,0 +1,68 @@
+$component : 'battery'
+
+.#{$component}
+    width: 195px
+
+    +element('wrapper')
+        width: 100%
+        height: 56px
+        display: block
+        background: url(../images/battery.png)
+        position: relative
+
+    +element('image')
+        height: 39px
+        width: calc( 100% - 28px )
+        position: absolute
+        top: 8px
+        left: 9px
+        background: color('white')
+        
+    +element('progress')
+        width: 0
+        height: 39px
+        position: absolute
+        left: 0
+        top: 0
+        
+    +modifier('bad')
+        +element('progress', $component)
+            background: url(../images/battery-bad.png)
+
+        +element( 'scores-current', $component )
+            color: color('red1')
+        
+    +modifier('average')
+        +element('progress', $component)
+            background: url(../images/battery-average.png)
+
+        +element( 'scores-current', $component )
+            color: color('yellow1')
+        
+    +modifier('good')
+        +element('progress', $component)
+            background: url(../images/battery-good.png)
+
+        +element( 'scores-current', $component )
+            color: color('green1')
+
+    +element( 'scores' )
+        text-align: center
+        margin-top: 30px
+
+    +element( 'scores-current' )
+        font-weight: 600
+        font-size: 48px
+        line-height: 65px
+        letter-spacing: 1.176
+        padding-right: 10px
+
+    +element( 'scores-divider' )
+        font-size: 19.2px
+        line-height: 26px
+        letter-spacing: .47
+
+    +element( 'scores-total' )
+        font-size: 19.2px
+        line-height: 26px
+        letter-spacing: .47

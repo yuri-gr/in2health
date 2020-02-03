@@ -1,0 +1,36 @@
+$component : 'sidebar-collapse'
+
+.#{$component}
+    width: 40px
+    height: 40px
+    border: none
+    background: color('lightGray')
+    display: none
+    position: absolute
+    right: 10px
+    top: 10px
+    z-index: 999
+
+    @include media-breakpoint-down(md)
+        display: inline
+
+    span
+        width: 80%
+        height: 2px
+        margin: 5px auto
+        display: block
+        background: color('darkerGray')
+        transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375)
+
+    &.active
+        span
+            margin: 0 auto
+
+            &:first-of-type
+                transform: rotate(45deg) translate(2px, 2px)
+
+            &:nth-of-type(2)
+                opacity: 0
+
+            &:last-of-type
+                transform: rotate(-45deg) translate(1px, -1px)
